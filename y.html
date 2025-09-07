@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .firstblock{
+            height:730px;
+            width:100%;
+            background-color: grey;
+        }
+
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(7,1fr) ;
+            height:100px;
+            width:100%;
+
+
+        }
+        .child1{
+            grid-row: 1/3;
+            grid-column: 1/2;
+            background-color:orangered;
+            color:white;
+            height:120px;
+            width:200px;
+            padding-left: 20px;
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        .child2>img{
+            height:15px;
+            width:15px;
+            grid-column:3/4;
+            grid-row:1/2;
+            margin-left:160px;
+
+        }
+        .child3>p{
+            grid-row:1/2;
+            grid-column:4/7;
+            color:whitesmoke;
+            font-size: 10px;
+            margin-left:5px;
+            margin-top: 3px;
+        }
+        .child4>img{
+            height:15px;
+            width:15px;
+            grid-row: 1/2;
+            grid-column: 6/7;
+            margin-left: 200px;
+            
+        }
+        .child5>p{
+            font-size: 8px;
+            color:whitesmoke;
+            margin-top:4px;
+            margin-left:9px;
+
+        }
+        .nav{
+            grid-row:2/3;
+            grid-column: 2/8;
+            background-color: black;
+            height:90px;
+            margin-top:10px;
+            
+        }
+        .nav-items{
+            display: flex;
+            color:white;
+            list-style-type: none;
+            justify-content: space-around;
+            margin-top: 35px;
+            font-size: 10px;;
+        }
+        .child6{
+            color:red;
+        }
+        
+        .child6:hover{
+            color:red
+            
+        }
+        .child7:hover{
+            color:red;
+        }
+        .child8:hover{
+            color:red;
+        }
+        .child9:hover{
+            color:red;
+        }
+        .child10:hover{
+            color:red;
+            list-style-type: none;
+           
+        }
+        .sub_child{
+            display: none;
+            
+        }
+        .sub_child ul{
+            list-style-type: none;
+        }
+        .nav-items .child10:hover .sub_child{
+            display: block;
+            position: absolute;
+            color:black;
+            background-color: white;
+            margin-top: 50px;
+            height:60px;
+            width:80px;
+            padding-left: 14px;
+        }
+        .child11:hover{
+            color:red;
+        }
+
+        .parent1>img{
+            height:20px;
+            width:20px;
+            border-radius: 50%;
+            border:0.7px solid black;
+            margin-top:-7px;
+            
+        }
+        
+        .parent1{
+            display: inline-block;
+            position: relative;
+        }
+        .parent1>img:hover{
+            background-color: red;
+        }
+        .parent2{
+            margin-top:70px;
+            margin-left:220px;
+            font-size: 40px;
+            color:white;
+
+
+        }
+        .parent3{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:5px;
+
+        }
+        .parent3 .first, .third{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .parent3 img{
+            border-radius: 8px;
+            object-fit: cover;
+            margin-top:30px;
+            
+        }
+        .first img{
+            margin-bottom: 10px;
+        }
+        .parent3 p{
+            text-align: justify;
+            margin-top: 60px;
+            margin-left: 20px;
+            height:300px;
+        }
+        .second{
+            height: 380px;
+            margin-left: 15px;
+            margin-top: 30px;;
+        }
+        .third{
+            height:380px;
+        }
+        .third p{
+            margin-top: 30px;
+            margin-right: 40px;;
+            width:230px;
+        }
+        .third img{
+            margin-top:70px;
+            
+        }
+        .secondblock{
+                height:400px;
+                width:100%;
+                display: flex;
+                justify-content: start;
+                gap:20px;
+                flex-wrap: wrap;
+                margin-top: 40px;
+        }
+        .chef img{
+            height:100px;
+            width:100px;
+            margin-left: 30px;
+            position:absolute;
+            z-index: 5;
+            animation:rotate 5s linear infinite;  
+        }
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+        .chef2 img{
+            position:absolute;
+            top:30;
+            z-index: 10;
+            border-top-left-radius: 50%;
+            margin-left: 30px;
+            margin-top: 10px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius:5px;
+            border-top-right-radius: 5px;
+            height:350px;
+            
+           
+            
+        }
+        .about{
+           margin-left:330px;
+           margin-top:10px;
+           height:100px;
+           width:400px;
+           display: flex;
+           flex-wrap:wrap;
+           gap:10px;
+           
+        }
+        .block>h3{
+            color:red;
+        }
+        .block>h1{
+            padding-left:5px;
+            padding-top:9px;
+        }
+        .block>p{
+            font-size: 10px;
+            padding-top:15px;
+        }
+        .sub_about{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .features{
+            height:189px;
+            width:230px;
+            background-color:whitesmoke;
+            border-radius: 5px;
+            
+        }
+        .features>img{
+            margin-left:10px;
+            border-radius: 50%;
+            background-color:orangered;
+            margin-top: 10px;    
+        }
+        .features>h3{
+            margin-left: 12px;
+        }
+        .features>p{
+            margin-left: 12px;
+            font-size: 12px;
+            padding-top:16px;
+        }
+        .features1{
+            height:185px;
+            width:230px;
+            
+            background-color: whitesmoke;
+            border-radius: 5px;;
+        }
+        .features1>img{
+            background-color: orangered;
+            border-radius: 50%;
+            margin-left:12px;
+            margin-top:10px;
+        }
+        .features1>h3{
+            margin-left:12px;
+        }
+        .features1>p{
+            font-size:12px;
+            margin-left: 12px;
+            padding-top:16px;
+        }
+        .thirdblock{
+            height:180px;
+            width:100%;
+            background-color: black;
+        }
+        .static{
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+        }
+        .static>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top: 50px;
+            width:60px;
+            height:80px;
+        }
+        .sub_static{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub_static>h3{
+            color:white;
+            margin-top:60px;
+            margin-left: 30px;;
+        }
+        .sub_static>h1{
+            color:white;
+            margin-left:28px;
+            padding-top:10px
+        }
+        .people>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top:50px;
+            height:80px;
+            width:60px;
+            
+        }
+        .sub_people{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub_people>h3{
+            color:white;
+            margin-left:30px;
+            margin-top:60px;
+        }
+        .sub_people>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:28px;
+        }
+        .tick>img{
+            border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top:50px;
+            height:80px;
+            width:60px;
+
+        }
+        .sub_tick{
+            display:flex;
+            flex-direction: column;
+        }
+        .sub_tick>h3{
+            color:white;
+            margin-left:30px;
+            margin-top:60px;
+        }
+        .sub_tick>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:28px;
+        }
+        .events>img{
+               border-radius: 50%;
+            background-color: white;
+            margin-left:50px;
+            margin-top:50px;
+            height:80px;
+            width:60px;
+        }
+        .sub_events{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub_events>h3{
+            color:white;
+            margin-left:30px;
+            margin-top:60px;
+        }
+        .sub_events>h1{
+            color:white;
+            padding-top:10px;
+            margin-left:28px;
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div class="firstblock">
+        <div class="parent">
+            <div class="child1"><b>CHEFER</b></div>
+            <div class="child2">
+                <img src="https://www.nicepng.com/png/detail/90-903587_email-icon-icon-email-orange-png.png" alt="">  
+            </div>
+            <div class="child3">
+                <p>info@example.com</p>
+            </div>
+            <div class="child4">
+                <img src="https://thumbs.dreamstime.com/b/phone-icon-flat-style-vector-illustration-round-orange-ba-background-shadow-96385326.jpg" alt="">
+            </div>
+            <div class="child5">
+                <p>+ 012 345 678</p>
+            </div>
+            <div class="nav">
+                <ul class="nav-items">
+                    <li class="child6">HOME</li>
+                    <li class="child7">ABOUT</li>
+                    <li class="child8">MENU</li>
+                    <li class="child9">CHEFS</li>
+                    <li class="child10">PAGES
+                        <div class="sub_child">
+                            <ul>
+                                <li>Features</li>
+                                <li>Blog post</li>
+                                <li>Testimonical</li>
+                                <li>404 error</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="child11">CONTACT</li>
+                
+                    <div class="parent1">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvz6CaJ2FlG_VbRz7VdPIyvN77mpgGc_h8NQ&s" alt="">
+                        <img src="https://thumbs.dreamstime.com/b/basic-rgb-142178044.jpg" alt="">
+                        <img src="https://cdn.vectorstock.com/i/500p/68/23/linkedin-logo-outline-white-icon-app-editable-vector-56366823.jpg" alt="">
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+        <div class="parent2">
+            <h1>JOHN DOE</h1>
+        </div>
+        <div class="parent3">
+            <div class="first">
+                <img src="./img/hero-2.jpg" alt="" width="250">
+                <p>Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. 
+                    Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod.</p>
+            </div>
+            <img  class="second" src="./img/hero-1.jpg" alt="" width="260">
+            <div class="third">
+                <p>Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. 
+                    Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod.</p>
+                <img class="hero3" src="./img/hero-3.jpg" alt="" width="250">
+            </div>
+        </div>
+    </div>
+        
+            <div class="secondblock">
+                <div class="seperate">
+                    <div class="chef">
+                        <img src="./img/about-round.jpg" alt="" width="300">
+                    
+                    </div>
+                    <div class="chef2">
+                        <img src="./img/about.jpg" alt="" width="300">
+                    </div>
+                </div>
+                <div class="about">
+                    <div class="block">
+                        <h3>A B O U T  U S</h3>
+                        <h1>COOKING TOGETHER WITH THE EXPERT</h1>
+                        <p>Nonumy erat diam duo labore clita. Sit magna ipsum dolor sed ea duo at ut. Tempor sit lorem sit magna ipsum duo. Sit eos dolor ut sea rebum,
+                        diam sea rebum lorem kasd ut ipsum dolor est ipsum. Et stet amet justo amet clita erat, ipsum sed at ipsum eirmod labore lorem.</p>
+                    </div>
+                    <div class="sub_about">
+                        <div class="features">
+                            <img src="./img/feature-1.png" alt="" width="50">
+                            <h3>Master Chef</h3>
+                                <p>Tempor erat elitr at rebum at at clita aliquyam consetetur.
+                                Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore.</p>
+                        </div>
+                        <div class="features1">
+                            <img src="./img/feature-3.png" alt="" width="50">
+                            <h3>Quality Food</h3>
+                            <p>Tempor erat elitr at rebum at at clita aliquyam consetetur.
+                                Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thirdblock">
+                <div class="static">
+                     <img src="https://www.pngall.com/wp-content/uploads/12/Red-Star-Symbol.png" alt="" width="30">
+                
+                    <div class="sub_static">
+                        <h3>years</h3>
+                        <h1>1234</h1>
+                    </div>
+                    <div class="people">
+                        <img src="https://static.vecteezy.com/system/resources/previews/000/576/186/original/sign-of-people-icon-vector.jpg" alt="" width="30">
+                    </div>
+                    <div class="sub_people">
+                        <h3>clients</h3>
+                        <h1>1234</h1>
+                    </div>
+                    <div class="tick">
+                        <img src="https://img.myloview.com/posters/red-check-mark-icon-tick-symbol-tick-icon-vector-illustration-700-154216548.jpg" alt="" width="30">
+                    </div>
+                    <div class="sub_tick">
+                        <h3>Awards</h3>
+                        <h1>1234</h1>
+                    </div>
+                    <div class="events">
+                        <img src="http://www.clker.com/cliparts/O/P/Y/O/h/P/red-coffee-mug-hi.png" alt="" width="30">
+                    </div>
+                    <div class="sub_events">
+                        <h3>Events</h3>
+                        <h1>1234</h1>
+                    </div>
+                </div>
+
+
+            </div>
+        
+       
+    
+</body>
+</html>
