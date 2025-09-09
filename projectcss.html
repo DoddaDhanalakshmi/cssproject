@@ -917,29 +917,85 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+           
+        }
+        .sub_nineblock img{
+            transition:all 0.5s ease;
+            transform: scale(1.0);
+        }
+        .sub_nineblock img:hover{
+              transform:scale(1.1);
+              
         }
         .menuimage1>img{
-              width:260px;
+              width:280px;
               margin-left:30px;
               height:280px;
               margin-top:10px;
+              position:relative;
               transition-duration: 2s;
         }
         .menuimages1:hover{
             transform:scale(1.2)
         }
         .menuimage2>img{
-            width:260px;
+            width:280px;
             margin-left:20px;
             margin-top:10px;
             height:280px;
         }
         .menuimage3>img{
-            width:260px;
+            width:280px;
             margin-left:20px;
             margin-top:10px;
             height:280px;
         }
+        .menu1content{
+            background-color:black;
+            position:absolute;
+            top:3840px;
+            width:280px;
+            margin-left:30px;
+            
+
+        }
+        .menu1content>h5{
+            color:white;
+            margin-left:90px;
+        }
+        .menu1content>h3{
+            color:white;
+        }
+        .menu2content{
+            background-color: black;
+            position:absolute;
+            top:3840px;
+            width:280px;
+            margin-left:20px;
+
+        }
+        .menu2content>h5{
+            color:white;
+            margin-left:90px;
+        }
+        .menu2content>h3{
+            color:white;
+        }
+        .menu3content{
+            position:absolute;
+            background-color: black;
+            top:4132px;
+            width:280px;
+            margin-left:20px;
+        }
+        .menu3content>h5{
+            color:white;
+            margin-left:90px;
+        }
+        .menu3content>h3{
+            color:white;
+        }
+
         @media screen and (min-width:320px) and (max-width:425px){
            .parent{
               height:50px;
@@ -1286,7 +1342,6 @@
                                     </div>
                                     
                                 </div>
-                                
                         </div>
                         
                     </div>
@@ -1306,9 +1361,17 @@
                     </div>
                     <div class="menuimage2">
                         <img src="./img/menu-5.jpg" alt="">
+                        <div class="menu2content">
+                            <h5>01 january 2045</h5>
+                            <h3>sed amet tempor amet sit ksad sea lorem</h3>
+                        </div>
                     </div>
                     <div class="menuimage3">
                         <img src="./img/menu-7.jpg" alt="">
+                        <div class="menu3content">
+                            <h5>01 january 2045</h5>
+                            <h3>sed amet tempor amet sit ksad sea lorem</h3>
+                        </div>
                     </div>
                 </div>
             </div>
