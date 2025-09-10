@@ -900,7 +900,7 @@
             margin-top:5px;
         }
         .nineblock{
-            height:400px;
+            height:800px;
             width:100%;
         }
         .nineblock>h2{
@@ -984,7 +984,7 @@
         .menu3content{
             position:absolute;
             background-color: black;
-            top:4132px;
+            top:3840px;
             width:280px;
             margin-left:20px;
         }
@@ -994,6 +994,111 @@
         }
         .menu3content>h3{
             color:white;
+        }
+        .tenthblock{
+            width:100%;
+            height:140px;
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap:0;
+        }
+        .tenthblock>img{
+            width:200px;
+            height:140px;
+            
+        }
+        .sub_tenthblock{
+            background-color:grey;
+            height:300px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+            flex-wrap: wrap;
+            width:1050px;
+            flex-direction: row;
+        }
+        .touch{
+            grid-column: 1/2;
+            color:white;
+        }
+        .touch>h1{
+            margin-top:20px;
+            margin-left:10px;
+        }
+        .touch>h5{
+            margin-left:37px;
+            padding-top:20px;
+
+        }
+        .quicklinks{
+            color:white;
+            grid-column: 2/3;
+            
+        }
+        .quicklinks>h5{
+            padding-left:20px;
+            padding-top:20px;
+        }
+        .quicklinks>h1{
+            margin-top:20px;
+        }
+        .morelinks{
+            color:white;
+            grid-column: 3/4;
+        }
+        .morelinks>h1{
+            margin-top:20px;
+
+        }
+        .morelinks>h5{
+            padding-left:20px;
+            padding-top:20px;
+        }
+        .form{
+            grid-column: 4/6;
+            background-color: black;
+            color:white;
+        }
+        .form>h1{
+            margin-left:60px;
+            margin-top:60px;
+            font-size: 20px;
+        }
+        .form>h5{
+            margin-left:26px;
+            font-size: 10px;
+            padding-top:15px;
+        }
+        .form>p{
+            font-size: 14px;
+            margin-left:10px;
+            padding-top: 15px;;
+        }
+        .form>input{
+            margin-left:20px;
+            margin-top:10px;
+            height:40px;
+            width:200px;
+        }
+        .form>h2{
+            margin-left:100px;
+            
+        }
+        .elevenblock{
+            color:white;
+            background-color: black;
+            display: flex;
+            width:1200px;
+            
+
+        }
+        .elevenblock>h1{
+            font-size: 13px;
+            margin-left: 100px;;
+        }
+        .elevenblock>h5{
+           font-size: 10px;
+           padding-top:2px;
         }
 
         @media screen and (min-width:320px) and (max-width:425px){
@@ -1375,6 +1480,55 @@
                     </div>
                 </div>
             </div>
+            <div class="tenthblock">
+                <img src="./img/menu-2.jpg" alt="">
+                <img src="./img/menu-3.jpg" alt="">
+                <img src="./img/menu-4.jpg" alt="">
+                <img src="./img/menu-5.jpg" alt="">
+                <img src="./img/menu-6.jpg" alt="">
+                <img src="./img/menu-7.jpg" alt="">
+                
+                
+            </div>
+            <div class="sub_tenthblock">
+                <div class="touch">
+                    <h1>Get In Touch</h1>
+                    <h5>123 street ,newyork,usa</h5>
+                    <h5>info@gmail.com</h5>
+                    <h5>+012 345 67890</h5>
+                </div>
+                <div class="quicklinks">
+                    <h1>Quick Links</h1>
+                    <h5>Home</h5>
+                    <h5>About us</h5>
+                    <h5>Food Menu</h5>
+                    <h5>Our Chefs</h5>
+                    <h5>Latest Blog</h5>
+                    <h5>Contact Us</h5>
+                </div>
+                <div class="morelinks">
+                    <h1>More Links </h1>
+                    <h5>Home</h5>
+                    <h5>About us</h5>
+                    <h5>Food Menu</h5>
+                    <h5>Our Chefs</h5>
+                    <h5>Latest Blog</h5>
+                    <h5>Contact Us</h5>
+                </div>
+                <div class="form">
+                    <h1>News letter</h1>
+                    <h5>SCUBSCRIBE OUR NEWS LETTER</h5>
+                    <P>Amet justo diam dolor rebum lorem sit stet sea justo ksad </P>
+                    <input type="email" placeholder="YOUR EMAIL" pattern="[A-z][a-z]+[1-9]+[@#$%^&*]" required>
+                    <h2><input type="submit" value="signup"></h2>
+                </div>
+            </div>
+            <div class="elevenblock">
+                <h1>your site name.</h1>
+                <h5>All Rights Reserved.Disrtibuted By Theme wagon</h5>
+                
+            </div>
+            
         
        
     
